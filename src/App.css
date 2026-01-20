@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* ===== HEADER ===== */
+header {
+  width: 100%;
+  height: 6rem;
+  background-color: #2D2323;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+nav span {
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav span:hover {
+  color: #f5bcbc;
+}
+
+/* ===== CROPPED ===== */
+.Cropped {
+  margin-top: 6rem;
+  background-color: #2D2323;
+  color: #ffffff;
+  width: 100%;
+}
+
+.Cropped h1 {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #2D2323;
+  width: 25rem;
+  border-radius: 12px;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card span:first-of-type {
+  font-weight: bold;
+}
+
+.card div {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.card div span:last-child {
+  font-weight: bold;
+  color: #FA654C;
+}
+
+/* ===== CAMISETAS ===== */
+.camisetas {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.camisetas-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.camisetas-header h1 {
+  font-size: 2rem;
+  color: #2D2323;
+}
+
+.camisetas-header hr {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+
+.camisetas-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.coluna {
+  display: flex;
+  justify-content: center;
+}
+
+.coluna.centro img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.camiseta-card {
+  width: 26rem;
+}
+
+.camiseta-card img {
+  height: 26rem;
+  object-fit: cover;
+}
+
+.bottom {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #2D2323;
+  color: #ffffff;
+  padding: 3rem 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 3rem;
+}
+
+.footer-container div {
+  flex: 1;
+  text-align: center;
+}
+
+footer h1 {
+  font-size: 1.4rem;
+}
+
+footer hr {
+  width: 60%;
+  margin: 0.5rem auto;
+  background-color: #555;
+  height: 1px;
+  border: none;
+}
+
+.texto {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icons a {
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.icons a:hover {
+  transform: scale(1.2);
+  color: #40C351;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #40C351;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+
+  header {
+    height: auto;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  nav {
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cards,
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .camiseta-card {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .camisetas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coluna.centro img {
+    max-width: 180px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    font-size: 1.7rem;
+  }
+}
